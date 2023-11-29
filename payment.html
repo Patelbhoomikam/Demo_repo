@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightgray;
+      background-image: url(image1.jpg);
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;
+        }
+    
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+    button:hover {
+      background-color: #45a049;
+    
+    }
+    .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color:lightgray;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+    .header{
+            color: white;
+            padding: 15px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color:black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 10px;
+            height: 15px;
+    }
+    .Payment{
+            float:center;
+        }
+    .paymentMode {
+      font-size: 16px; /* Adjust the font size as needed */
+      padding: 12px;   /* Adjust the padding as needed */
+      height: 40px;  
+        /* Adjust the height as needed */
+    }
+
+  </style>
+  
+</head>
+<div class="header">
+    <div class="Payment"><center>Payment  Details </center></div>
+
+</div>
+<div class="container">
+<form id="paymentMode" >
+  <label for="AmountPayable"><b>Amount Payable:</b></label>
+  <input type="text" id="cardNumber" placeholder="total amount" required>
+  
+ 
+      <label for="paymentMode"><b>Select Payment Mode:</b></label>
+      <select id="paymentMode" name="paymentMode">
+        <option value="creditCard"><b>Credit Card</b></option>
+        <option value="debitCard"><b>Debit Card</b></option>
+        <option value="UPI Payment"><b>UPI payment</b></option>
+        <option value="Phone Pay"><b>Phone pe</b></option>
+        <!-- Add more payment modes as needed -->
+      </select><br><br>
+  
+      <!-- Additional form elements for each payment mode can be added here -->
+  <a href="contactus.html">
+      <button type="button" >Submit Payment</button></a>
+    </div>
+    </form>
+<body>
+
+  
+    
+  
+
+  <script>
+    function submitPayment() {
+      // Collect payment details
+      var AmountPayable  = document.getElementById("AmountPayable").value;
+      var CustomerName = document.getElementById("CustomerName").value;
+      var selectedPaymentMode = document.getElementById("paymentMode").value;
+      alert("Selected Payment Mode: " + selectedPaymentMode);
+      // Validate payment details (you may use a library like Validate.js for more complex validation)
+      if (!cardNumber || !CustomerName) {
+        alert("Please fill in all the fields");
+        return;
+      }
+        
+     
+    }
+   
+  </script>
+
+</body>
+</html>
